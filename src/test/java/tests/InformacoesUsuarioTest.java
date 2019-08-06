@@ -1,6 +1,8 @@
 package tests;
 
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -73,7 +75,11 @@ public class InformacoesUsuarioTest {
         
         
 		// Na mensagem de id "toast-container" validar que o texto é "Your contact has been added!"
-		
+		WebElement mensagemPop = navegador.findElement(By.id("toast-container"));
+		String mensagem = mensagemPop.getText();   //Capturando text do mensagemPop
+		assertEquals("Your contact has been added!",mensagem);  //Comparação de mensagemPop
+        
+        
 		
 //		// Validar que dentro do elemento com class "me" está o texto "Hi, Julio"
 //		WebElement me = navegador.findElement(By.className("me"));
