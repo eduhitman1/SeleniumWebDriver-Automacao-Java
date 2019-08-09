@@ -15,8 +15,6 @@ public class Web {
 
 		// Navegador para a página do Taskit!
 		navegador.get("http://www.juliodelima.com.br/taskit/");
-		
-		
 		return navegador;
    }
 	
