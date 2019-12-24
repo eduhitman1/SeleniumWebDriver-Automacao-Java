@@ -32,7 +32,6 @@ public class LoginFormPage extends BasePage{
 		digitarLogin(login);
 		digitarSenha(senha);
 		clicarSignIn();
-		
 		return new SecretaPage(navegador);
 	}
 	
