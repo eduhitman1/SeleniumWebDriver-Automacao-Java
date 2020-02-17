@@ -21,8 +21,8 @@ public class LoginFormPage extends BasePage{
         return this;
 	}
 	
-	public SecretaPage clicarSignIn() {
 		// Clicar no link com texto "SIGN IN"
+	public SecretaPage clicarSignIn() {
 		navegador.findElement(By.linkText("SIGN IN")).click();
 		
 		return new SecretaPage(navegador);
