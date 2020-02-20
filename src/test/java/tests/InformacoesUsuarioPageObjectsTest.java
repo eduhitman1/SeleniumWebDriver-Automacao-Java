@@ -26,9 +26,13 @@ public class InformacoesUsuarioPageObjectsTest {
 	}
 
 	@Test
-	public void testAdicionarUmaInformacaoAdicionalDoUsuario(@Param(name = "login") String login,
-			@Param(name = "senha") String senha, @Param(name = "tipo") String tipo,
-			@Param(name = "contato") String contato, @Param(name = "mensagem") String mensagemEsperada) {
+	public void testAdicionarUmaInformacaoAdicionalDoUsuario(
+			@Param(name = "login") String login,
+			@Param(name = "senha") String senha, 
+			@Param(name = "tipo") String tipo,
+			@Param(name = "contato") String contato, 
+			@Param(name = "mensagem") String mensagemEsperada
+			) {
 		String textoToast = new LoginPage(navegador).clicarSignIn().fazerLogin(login, senha).clicarMe()
 				.clicarAbaMoreDataAboutYou().clicarBotaoAddMoreDataAboutYou().adicionarContato(tipo, contato)
 				.capturarTextoToast();

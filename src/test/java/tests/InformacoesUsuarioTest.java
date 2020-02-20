@@ -77,7 +77,8 @@ public class InformacoesUsuarioTest {
 		String mensagem = mensagemPop.getText(); // Capturando text do mensagemPop
 		assertEquals("Rest in peace, dear phone!", mensagem); // Comparação de mensagemPop
 
-		String screenshotArquivo = "C:\\Users\\Eduardo\\" + Generator.dataHoraParaArquivo() + test.getMethodName()+ ".png";
+		String screenshotArquivo = "C:\\Users\\Eduardo\\" + Generator.dataHoraParaArquivo() + test.getMethodName()
+				+ ".png";
 		Screenshot.tirar(navegador, screenshotArquivo);
 
 		WebDriverWait aguardar = new WebDriverWait(navegador, 10);
